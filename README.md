@@ -1,4 +1,3 @@
-# uas-project
 import math
 from haversine import haversine,Unit
 
@@ -33,6 +32,9 @@ def msg():
   print("  Traversing towards it...")
 #Function for ejection
 def eject():
+  print("Target in range")
+  print()
+  print("Ejecting payload...")
   print("Payload ejected")  
 
 wind_velocity=0
@@ -61,7 +63,7 @@ range=calc_range(vel_res,height)  #calculating range
 drop_dist=calc_dist(lat_p,lon_p,lat_target,lon_target)   #calculating drop distance
 
 print("Target distance:",drop_dist,'m',"     Range:",range,'m')
-print("")
+
 
 
 if(range<drop_dist-1):  
